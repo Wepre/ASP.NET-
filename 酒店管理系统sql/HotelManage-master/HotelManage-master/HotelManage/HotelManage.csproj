@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6CF68FCC-6C94-499E-BE43-686836AC8835}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HotelManage</RootNamespace>
+    <AssemblyName>HotelManage</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddDays.aspx" />
+    <Content Include="App_Data\HotelManage1.mdf" />
+    <Content Include="App_Data\HotelManage1_log.ldf">
+      <DependentUpon>HotelManage1.mdf</DependentUpon>
+    </Content>
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\img\alarm_dark.jpg" />
+    <Content Include="assets\img\alarm_light.jpg" />
+    <Content Include="assets\img\bg.jpg" />
+    <Content Include="assets\js\script.js" />
+    <Content Include="ChangeGuest.aspx" />
+    <Content Include="ChangePwd.aspx" />
+    <Content Include="ChangeSession.aspx" />
+    <Content Include="CheckIn.aspx" />
+    <Content Include="CreRoom.aspx" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\metro_nav.png" />
+    <Content Include="css\metro_navT.png" />
+    <Content Include="css\navigation.css" />
+    <Content Include="css\navigationT.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\zzsc.css" />
+    <Content Include="Firstindex.aspx" />
+    <Content Include="GuestInfo.aspx" />
+    <Content Include="GuestMan.aspx" />
+    <Content Include="GuestReg.aspx" />
+    <Content Include="images\actbg.jpg" />
+    <Content Include="images\admin.jpg" />
+    <Content Include="images\admin1.jpg" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\chaxunkongfang.png" />
+    <Content Include="images\checkdate.png" />
+    <Content Include="images\fangjianxinxi.png" />
+    <Content Include="images\fangjianzhuangtai.png" />
+    <Content Include="images\fenggeguanli.png" />
+    <Content Include="images\gukeleixing.png" />
+    <Content Include="images\gukexinxi.png" />
+    <Content Include="images\guzhangbaoxiu.png" />
+    <Content Include="images\hehe_副本.jpg" />
+    <Content Include="images\icon_apps.png" />
+    <Content Include="images\icon_edit.png" />
+    <Content Include="images\icon_gallery.png" />
+    <Content Include="images\icon_home.png" />
+    <Content Include="images\icon_settings.png" />
+    <Content Include="images\ico\1.1.jpg" />
+    <Content Include="images\ico\1.jpg" />
+    <Content Include="images\ico\2.1.jpg" />
+    <Content Include="images\ico\2.jpg" />
+    <Content Include="images\ico\3.1.jpg" />
+    <Content Include="images\ico\3.jpg" />
+    <Content Include="images\ico\4.1.jpg" />
+    <Content Include="images\ico\4.jpg" />
+    <Content Include="images\ico\43.jpg" />
+    <Content Include="images\ico\5.1.jpg" />
+    <Content Include="images\ico\5.jpg" />
+    <Content Include="images\ico\6.1.jpg" />
+    <Content Include="images\ico\6.jpg" />
+    <Content Include="images\ico\type.jpg" />
+    <Content Include="images\ico\type1.jpg" />
+    <Content Include="images\ico\type2.jpg" />
+    <Content Include="images\ico\type3.jpg" />
+    <Content Include="images\ico\type4.jpg" />
+    <Content Include="images\ico\type5.jpg" />
+    <Content Include="images\ico\type6.jpg" />
+    <Content Include="images\illustration.svg" />
+    <Content Include="images\JClogo.bmp" />
+    <Content Include="images\jieshao.jpg" />
+    <Content Include="images\JingChu.png" />
+    <Content Include="images\jzgx.png" />
+    <Content Include="images\LeftBg.png" />
+    <Content Include="images\loucengzhuangtai.png" />
+    <Content Include="images\ooo.jpg" />
+    <Content Include="images\opbg1.jpg" />
+    <Content Include="images\pro_down.png" />
+    <Content Include="images\pro_left.png" />
+    <Content Include="images\reportlogo.jpg" />
+    <Content Include="images\ruzhudengji.png" />
+    <Content Include="images\ruzhuguanli.png" />
+    <Content Include="images\ruzhuxinxi.png" />
+    <Content Include="images\sd.jpg" />
+    <Content Include="images\searchlogo.png" />
+    <Content Include="images\shenqingtuifang.png" />
+    <Content Include="images\systemmsg.png" />
+    <Content Include="images\tongjibaobiao.png" />
+    <Content Include="images\topbg.png" />
+    <Content Include="images\tuichuxitong.png" />
+    <Content Include="images\xinxixiugai.png" />
+    <Content Include="images\xinzengguke.png" />
+    <Content Include="images\xiugaimima.png" />
+    <Content Include="images\yearlogo.png" />
+    <Content Include="images\yudingguanli.png" />
+    <Content Include="images\yudingguanli1.png" />
+    <Content Include="js\adapters\standalone-framework.js" />
+    <Content Include="js\adapters\standalone-framework.src.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\charts-custom.js" />
+    <Content Include="js\charts-home.js" />
+    <Content Include="js\front.js" />
+    <Content Include="js\hehe.js" />
+    <Content Include="js\highcharts-3d.js" />
+    <Content Include="js\highcharts-3d.src.js" />
+    <Content Include="js\highcharts-more.js" />
+    <Content Include="js\highcharts-more.src.js" />
+    <Content Include="js\highcharts.js" />
+    <Content Include="js\highcharts.src.js" />
+    <Content Include="js\html5.js" />
+    <Content Include="js\jquery-1.8.3.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.page.js" />
+    <Content Include="js\js.cookie.min.js" />
+    <Content Include="js\modules\broken-axis.js" />
+    <Content Include="js\modules\broken-axis.src.js" />
+    <Content Include="js\modules\canvas-tools.js" />
+    <Content Include="js\modules\canvas-tools.src.js" />
+    <Content Include="js\modules\data.js" />
+    <Content Include="js\modules\data.src.js" />
+    <Content Include="js\modules\drilldown.js" />
+    <Content Include="js\modules\drilldown.src.js" />
+    <Content Include="js\modules\exporting.js" />
+    <Content Include="js\modules\exporting.src.js" />
+    <Content Include="js\modules\funnel.js" />
+    <Content Include="js\modules\funnel.src.js" />
+    <Content Include="js\modules\heatmap.js" />
+    <Content Include="js\modules\heatmap.src.js" />
+    <Content Include="js\modules\no-data-to-display.js" />
+    <Content Include="js\modules\no-data-to-display.src.js" />
+    <Content Include="js\modules\solid-gauge.js" />
+    <Content Include="js\modules\solid-gauge.src.js" />
+    <Content Include="js\modules\treemap.js" />
+    <Content Include="js\modules\treemap.src.js" />
+    <Content Include="js\moment.min.js" />
+    <Content Include="js\navigation.js" />
+    <Content Include="js\navigationT.js" />
+    <Content Include="js\themes\dark-blue.js" />
+    <Content Include="js\themes\dark-green.js" />
+    <Content Include="js\themes\dark-unica.js" />
+    <Content Include="js\themes\gray.js" />
+    <Content Include="js\themes\grid-light.js" />
+    <Content Include="js\themes\grid.js" />
+    <Content Include="js\themes\sand-signika.js" />
+    <Content Include="js\themes\skies.js" />
+    <Content Include="js\TweenMax.min.js" />
+    <Content Include="laydate\laydate.js" />
+    <Content Include="laydate\need\laydate.css" />
+    <Content Include="laydate\skins\dahong\icon.png" />
+    <Content Include="laydate\skins\dahong\laydate.css" />
+    <Content Include="laydate\skins\danlan\icon.png" />
+    <Content Include="laydate\skins\danlan\laydate.css" />
+    <Content Include="laydate\skins\default\icon.png" />
+    <Content Include="laydate\skins\default\laydate.css" />
+    <Content Include="laydate\skins\molv\icon.png" />
+    <Content Include="laydate\skins\molv\laydate.css" />
+    <Content Include="laydate\skins\qianhuang\icon.png" />
+    <Content Include="laydate\skins\qianhuang\laydate.css" />
+    <Content Include="laydate\skins\yahui\icon.png" />
+    <Content Include="laydate\skins\yahui\laydate.css" />
+    <Content Include="laydate\skins\yalan\icon.png" />
+    <Content Include="laydate\skins\yalan\laydate.css" />
+    <Content Include="LiveMark.aspx" />
+    <Content Include="OPLogin.aspx" />
+    <Content Include="QuitHome.aspx" />
+    <Content Include="Reports.aspx" />
+    <Content Include="Report_Ave.aspx" />
+    <Content Include="Report_Col.aspx" />
+    <Content Include="Report_Com.aspx" />
+    <Content Include="Report_Pie.aspx" />
+    <Content Include="Reserve.aspx" />
+    <Content Include="ReserveDetail.aspx" />
+    <Content Include="ReserveMark.aspx" />
+    <Content Include="Right.aspx" />
+    <Content Include="RoomDetail.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Skip.aspx" />
+    <Content Include="Transform.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddDays.aspx.cs">
+      <DependentUpon>AddDays.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddDays.aspx.designer.cs">
+      <DependentUpon>AddDays.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeGuest.aspx.cs">
+      <DependentUpon>ChangeGuest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeGuest.aspx.designer.cs">
+      <DependentUpon>ChangeGuest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePwd.aspx.cs">
+      <DependentUpon>ChangePwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePwd.aspx.designer.cs">
+      <DependentUpon>ChangePwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeSession.aspx.cs">
+      <DependentUpon>ChangeSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeSession.aspx.designer.cs">
+      <DependentUpon>ChangeSession.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckIn.aspx.cs">
+      <DependentUpon>CheckIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckIn.aspx.designer.cs">
+      <DependentUpon>CheckIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreRoom.aspx.cs">
+      <DependentUpon>CreRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreRoom.aspx.designer.cs">
+      <DependentUpon>CreRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Firstindex.aspx.cs">
+      <DependentUpon>Firstindex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Firstindex.aspx.designer.cs">
+      <DependentUpon>Firstindex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GuestInfo.aspx.cs">
+      <DependentUpon>GuestInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GuestInfo.aspx.designer.cs">
+      <DependentUpon>GuestInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GuestMan.aspx.cs">
+      <DependentUpon>GuestMan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GuestMan.aspx.designer.cs">
+      <DependentUpon>GuestMan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GuestReg.aspx.cs">
+      <DependentUpon>GuestReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GuestReg.aspx.designer.cs">
+      <DependentUpon>GuestReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LiveMark.aspx.cs">
+      <DependentUpon>LiveMark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LiveMark.aspx.designer.cs">
+      <DependentUpon>LiveMark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPLogin.aspx.cs">
+      <DependentUpon>OPLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OPLogin.aspx.designer.cs">
+      <DependentUpon>OPLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuitHome.aspx.cs">
+      <DependentUpon>QuitHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuitHome.aspx.designer.cs">
+      <DependentUpon>QuitHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Ave.aspx.cs">
+      <DependentUpon>Report_Ave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report_Ave.aspx.designer.cs">
+      <DependentUpon>Report_Ave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Col.aspx.cs">
+      <DependentUpon>Report_Col.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report_Col.aspx.designer.cs">
+      <DependentUpon>Report_Col.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Com.aspx.cs">
+      <DependentUpon>Report_Com.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report_Com.aspx.designer.cs">
+      <DependentUpon>Report_Com.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Pie.aspx.cs">
+      <DependentUpon>Report_Pie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report_Pie.aspx.designer.cs">
+      <DependentUpon>Report_Pie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reserve.aspx.cs">
+      <DependentUpon>Reserve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reserve.aspx.designer.cs">
+      <DependentUpon>Reserve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReserveDetail.aspx.cs">
+      <DependentUpon>ReserveDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReserveDetail.aspx.designer.cs">
+      <DependentUpon>ReserveDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReserveMark.aspx.cs">
+      <DependentUpon>ReserveMark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReserveMark.aspx.designer.cs">
+      <DependentUpon>ReserveMark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Right.aspx.cs">
+      <DependentUpon>Right.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Right.aspx.designer.cs">
+      <DependentUpon>Right.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RoomDetail.aspx.cs">
+      <DependentUpon>RoomDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoomDetail.aspx.designer.cs">
+      <DependentUpon>RoomDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Skip.aspx.cs">
+      <DependentUpon>Skip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Skip.aspx.designer.cs">
+      <DependentUpon>Skip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transform.aspx.cs">
+      <DependentUpon>Transform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transform.aspx.designer.cs">
+      <DependentUpon>Transform.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{A92D683C-DA80-4642-9874-22EA0DB68161}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="MasterPage.master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3427</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3430/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

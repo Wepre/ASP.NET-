@@ -1,0 +1,86 @@
+##################################剔除文件###################################	
+AboutProject.aspx
+AboutUs.aspx
+Act.aspx
+Index.aspx
+Left.aspx
+Login.aspx
+OPLogin.aspx
+Top.aspx
+##################################模块与文件名###################################	
+信息查询：
+	入住信息：LiveMark.aspx
+	顾客信息：GuestInfo.aspx?roomid=0
+	预约信息：ReserveMark.aspx
+客户管理：
+	客户信息：GuestMan.aspx
+	新增客户：GuestReg.aspx
+	删除客户：GuestMan.aspx
+	客户升级：GuestMan.aspx
+入住管理：
+	登记查询：LiveMark.aspx
+	入住登记：GuestInfo.aspx?roomid=0
+	房间预定：GuestInfo.aspx?roomid=0
+	预定管理：ReserveMark.aspx	
+统计管理：
+	统计报表：Reports.aspx
+后台设置：
+	修改密码：ChangePwd.aspx
+	关于系统：AboutProject.aspx
+	关于我们：AboutUs.aspx
+	切换用户:
+	退出系统：
+	
+##################################文件名与功能###################################	
+LiveMark.aspx:
+	入住信息（信息查询）：
+	登记查询（入住管理）：
+GuestInfo.aspx?roomid=0:
+	顾客信息（信息查询）：
+	入住登记（入住管理）：
+	房间预定（入住管理）：
+ReserveMark.aspx:
+	预约信息（信息查询）：
+	预约管理（入住管理）：
+GuestMan.aspx:
+	客户信息（客户管理）：
+	删除客户（客户管理）：
+	升级客户（客户管理）：
+GuestReg.aspx:
+	新增客户（客户管理）
+	新增用户信息登记（表）
+Reports.aspx:
+	统计报表（统计管理）：
+Right.aspx:
+	欢迎页面：
+	提醒看板：
+	时钟看板：
+ChangePwd.aspx:
+	修改密码（后台设置）：
+AboutProject.aspx:
+	关于系统（后台设置）：
+AboutUs.aspx:
+	关于我们（后台设置）：
+Skin.aspx:
+	判断用户点击的房间信息 进行跳转到相应的页面
+	10.7 10.21 10.28
+AddDays.aspx:
+	用户房间续费（表）
+CreRoom.aspx:	
+	房间开通登记（表）
+Transform.aspx:	
+	用户房间更换登记（表）
+QuitHome.aspx:
+	用户退房结算（表）
+RoomDetail.aspx:
+	用户入住信息详情（表）
+CheckIn.aspx:	
+	用户入住信息登记（表）
+ReserveDetail.aspx:
+	用户预约信息详情（表）
+Reserve.aspx:	
+	用户预定信息登记（表）
+ChangeGuest.aspx:	
+	用户信息修改记录（表）
+ChangeSession.aspx
+	修改Session	

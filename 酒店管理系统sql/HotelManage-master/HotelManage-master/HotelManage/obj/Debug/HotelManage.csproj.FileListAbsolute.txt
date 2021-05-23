@@ -1,0 +1,10 @@
+C:\Users\Administrator\Desktop\ASP\子龙\HotelManage-master\HotelManage-master\HotelManage\bin\HotelManage.dll.config
+C:\Users\Administrator\Desktop\ASP\子龙\HotelManage-master\HotelManage-master\HotelManage\bin\HotelManage.dll
+C:\Users\Administrator\Desktop\ASP\子龙\HotelManage-master\HotelManage-master\HotelManage\bin\HotelManage.pdb
+C:\Users\Administrator\Desktop\ASP\子龙\HotelManage-master\HotelManage-master\HotelManage\bin\BLL.dll
+C:\Users\Administrator\Desktop\ASP\子龙\HotelManage-master\HotelManage-master\HotelManage\bin\DAL.dll
+C:\Users\Administrator\Desktop\ASP\子龙\HotelManage-master\HotelManage-master\HotelManage\bin\BLL.pdb
+C:\Users\Administrator\Desktop\ASP\子龙\HotelManage-master\HotelManage-master\HotelManage\bin\DAL.pdb
+C:\Users\Administrator\Desktop\ASP\子龙\HotelManage-master\HotelManage-master\HotelManage\obj\Debug\HotelManage.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\ASP\子龙\HotelManage-master\HotelManage-master\HotelManage\obj\Debug\HotelManage.dll
+C:\Users\Administrator\Desktop\ASP\子龙\HotelManage-master\HotelManage-master\HotelManage\obj\Debug\HotelManage.pdb

@@ -1,0 +1,6 @@
+.menu_list{margin:10px;width:185px;}
+.menu_head{width:185px;height:47px;line-height:47px;padding-left:38px;font-size:14px;color:white;cursor:pointer;border:1px solid #e1e1e1;position:relative;font-weight:bold;background:#00AA68 url(../images/pro_left.png) center right no-repeat;margin:0;}
+.menu_list .current{background:#00AA68 url(../images/pro_down.png) center right no-repeat;}
+.menu_body{width:223px;height:auto;overflow:hidden;line-height:38px;border-left:1px solid #e1e1e1;backguound:#fff;border-right:1px solid #e1e1e1;}
+.menu_body a{display:block;width:223px;height:40px;line-height:38px;padding-left:55px;color:#777777;background:#fff;text-decoration:none;border-bottom:1px solid #e1e1e1;}
+.menu_body a:hover{text-decoration:none;}

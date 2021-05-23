@@ -1,0 +1,33 @@
+body{
+	font-family : 'Segoe UI', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif';
+	font-size : 13px;
+}
+
+h1{
+	text-align : center;
+}
+
+div.colpick{
+	width : 100%;
+}
+
+div.colpick>ul{
+	padding : 0;
+	margin: auto;
+	width : 180px;
+	height : 50px;
+}
+div.colpick>ul>li{
+	float:left;
+	height : 50px;
+	width : 50px;
+	background-color : black;
+	list-style-type : none;
+	margin : auto 5px ;
+}
+
+div.colpick>ul>li>a{
+	display:block;
+	height : 100%;
+	width: 100%;
+}

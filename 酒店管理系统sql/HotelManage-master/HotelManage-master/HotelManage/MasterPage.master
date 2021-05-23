@@ -1,0 +1,419 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<%--母版页--%>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>HotelManage</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="all,follow" />
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://www.jq22.com/jquery/bootstrap-4.2.1.css" />
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+    <!-- Google fonts - Popppins for copy-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,800" />
+    <!-- orion icons-->
+    <link rel="stylesheet" href="css/orionicons.css" />
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.blue.css" itemid="theme-stylesheet" />
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css" />
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png?3" />
+    <!-- Tweaks for older IEs-->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <%--日期控件js--%>
+    <script src="laydate/laydate.js" type="text/javascript"></script>
+    <script type="text/jscript">
+   function aa(){
+   
+   
+   }
+   
+   
+    !function ()
+     {
+        laydate.skin('molv'); //切换皮肤，请查看skins下面皮肤库
+        laydate({ elem: '#demo' }); //绑定元素
+        
+    } ();
+    //日期范围限制
+
+    
+    var start = {
+        elem: '#start',
+        format: 'YYYY-MM-DD',
+        min: laydate.now(), //设定最小日期为当前日期
+        max: '2099-06-16', //最大日期
+        istime: true,
+        istoday: false,
+        choose: function (datas) {
+            end.min = datas; //开始日选好后，重置结束日的最小日期
+            end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+    var end = {
+        elem: '#end',
+        format: 'YYYY-MM-DD',
+        min: laydate.now(),
+        max: '2099-09-16',
+        istime: true,
+        istoday: false,
+        choose: function (datas) {
+            start.max = datas; //结束日选好后，充值开始日的最大日期
+        }
+    };
+    laydate(start);
+    laydate(end);
+    
+    //自定义日期格式
+    laydate({
+        elem: '#test1',
+        format: 'YYYY年MM月DD日',
+        festival: true, //显示节日
+        choose: function (datas) { //选择日期完毕的回调
+            alert('得到：' + datas);
+        }
+    });
+    //日期范围限定在昨天到明天
+    laydate({
+        elem: '#hello3',
+        min: laydate.now(-1), //-1代表昨天，-2代表前天，以此类推
+        max: laydate.now(+1) //+1代表明天，+2代表后天，以此类推
+    });
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div>
+            <table class="w-100">
+                <%--标题顶部--%>
+                <tr>
+                    <td id="tdHead" colspan="2">
+                        <header class="header" style="width: 100%">
+                            <nav class="navbar navbar-expand-lg px-4 py-2 bg-white shadow">
+                                <a href="#" class="sidebar-toggler text-gray-500 mr-4 mr-lg-5 lead">
+                                    <i class="fas fa-align-left"></i>
+                                </a>
+                                <a href="Right.aspx" class="navbar-brand font-weight-bold text-uppercase text-base">HOTEL WYU</a>
+                                <ul class="ml-auto d-flex align-items-center list-unstyled mb-0">
+                                    <li class="nav-item"></li>
+                                    <li class="nav-item dropdown mr-3"><a id="notifications" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle text-gray-400 px-1"><i class="fa fa-bell"></i><span class="notification-icon"></span></a>
+                                        <div aria-labelledby="notifications" class="dropdown-menu">
+                                            <a href="#" class="dropdown-item">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="icon icon-sm bg-violet text-white"><i class="fab fa-twitter"></i></div>
+                                                    <div class="text ml-2">
+                                                        <p class="mb-0">You have 2 followers</p>
+                                                    </div>
+                                                </div>
+                                            </a><a href="#" class="dropdown-item">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="icon icon-sm bg-green text-white"><i class="fas fa-envelope"></i></div>
+                                                    <div class="text ml-2">
+                                                        <p class="mb-0">You have 6 new messages</p>
+                                                    </div>
+                                                </div>
+                                            </a><a href="#" class="dropdown-item">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="icon icon-sm bg-blue text-white"><i class="fas fa-upload"></i></div>
+                                                    <div class="text ml-2">
+                                                        <p class="mb-0">Server rebooted</p>
+                                                    </div>
+                                                </div>
+                                            </a><a href="#" class="dropdown-item">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="icon icon-sm bg-violet text-white"><i class="fab fa-twitter"></i></div>
+                                                    <div class="text ml-2">
+                                                        <p class="mb-0">You have 2 followers</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-divider"></div>
+                                            <a href="#" class="dropdown-item text-center"><small class="font-weight-bold headings-font-family text-uppercase">View all notifications</small></a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown ml-auto">&nbsp;<div aria-labelledby="userInfo" class="dropdown-menu">
+                                        <a href="#" class="dropdown-item"><strong class="d-block text-uppercase headings-font-family">Mark Stephen</strong><small>Web Developer</small></a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="#" class="dropdown-item">Settings</a><a href="#" class="dropdown-item">Activity log       </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="login.html" class="dropdown-item">Logout</a>
+                                    </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </header>
+                    </td>
+                </tr>
+                <tr>
+                    <%--左边导航--%>
+                    <td id="tdLeft" style="width: 30%">
+                        <div class="d-flex align-items-stretch">
+                            <div id="sidebar" class="sidebar py-3">
+                                <div class="text-black-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">MAIN</div>
+                                <ul class="sidebar-menu list-unstyled">
+                                    <li class="sidebar-list-item"><a href="index2.aspx" class="sidebar-link text-muted " data-toggle="collapse" data-target="#home" aria-expanded="false" aria-controls="home">
+                                        <i class="o-home-1 mr-3 text-black"></i><span>常用菜单</span></a>
+                                        <div id="home" class="collapse">
+                                            <ul class="sidebar-menu list-unstyled border-left border-primary border-thick">
+                                                <li class="sidebar-list-item"><a href="LiveMark.aspx" class="sidebar-link text-muted pl-lg-5">登记查询</a></li>
+                                                <li class="sidebar-list-item"><a href="GuestInfo.aspx?roomid=0" class="sidebar-link text-muted pl-lg-5">入住登记</a></li>
+                                                <li class="sidebar-list-item"><a href="GuestInfo.aspx?roomid=0" class="sidebar-link text-muted pl-lg-5">房间预定</a></li>
+                                                <li class="sidebar-list-item"><a href="ReserveMark.aspx" class="sidebar-link text-muted pl-lg-5">预订管理</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="sidebar-list-item"><a href="charts.aspx" class="sidebar-link text-muted" data-toggle="collapse" data-target="#chart" aria-expanded="false" aria-controls="chart">
+                                        <i class="o-sales-up-1 mr-3 text-black"></i><span>信息查询</span></a>
+                                        <div id="chart" class="collapse">
+                                            <ul class="sidebar-menu list-unstyled border-left border-primary border-thick">
+                                                <li class="sidebar-list-item"><a href="LiveMark.aspx" class="sidebar-link text-muted pl-lg-5">入住信息</a></li>
+                                                <li class="sidebar-list-item"><a href="GuestInfo.aspx?roomid=0" class="sidebar-link text-muted pl-lg-5">顾客信息</a></li>
+                                                <li class="sidebar-list-item"><a href="ReserveMark.aspx" class="sidebar-link text-muted pl-lg-5">预约信息</a></li>
+                                                <li class="sidebar-list-item"><a href="Reports.aspx" class="sidebar-link text-muted pl-lg-5">营业统计</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="sidebar-list-item"><a href="tableas.aspx" class="sidebar-link text-muted" data-toggle="collapse" data-target="#tablea" aria-expanded="false" aria-controls="tablea">
+                                        <i class="o-table-content-1 mr-3 text-black"></i><span>客户管理</span></a>
+                                        <div id="tablea" class="collapse">
+                                            <ul class="sidebar-menu list-unstyled border-left border-primary border-thick">
+                                                <li class="sidebar-list-item"><a href="GuestMan.aspx" class="sidebar-link text-muted pl-lg-5">客户信息</a></li>
+                                                <li class="sidebar-list-item"><a href="GuestReg.aspx" class="sidebar-link text-muted pl-lg-5">新增客户</a></li>
+                                                <%--<li class="sidebar-list-item"><a href="GuestMan.aspx" class="sidebar-link text-muted pl-lg-5">删除客户</a></li>--%>
+                                                <%--<li class="sidebar-list-item"><a href="GuestMan.aspx" class="sidebar-link text-muted pl-lg-5">客户升级</a></li>--%>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="sidebar-list-item"><a href="forms.aspx" class="sidebar-link text-muted" data-toggle="collapse" data-target="#form" aria-expanded="false" aria-controls="form">
+                                        <i class="o-survey-1 mr-3 text-black"></i><span>入住管理</span></a>
+                                        <div id="form" class="collapse">
+                                            <ul class="sidebar-menu list-unstyled border-left border-primary border-thick">
+                                                <li class="sidebar-list-item"><a href="LiveMark.aspx" class="sidebar-link text-muted pl-lg-5">登记查询</a></li>
+                                                <li class="sidebar-list-item"><a href="GuestInfo.aspx?roomid=0" class="sidebar-link text-muted pl-lg-5">入住/预定登记</a></li>
+                                                <li class="sidebar-list-item"><a href="Right.aspx" class="sidebar-link text-muted pl-lg-5">客房管理</a></li>
+                                                <li class="sidebar-list-item"><a href="ReserveMark.aspx" class="sidebar-link text-muted pl-lg-5">预定管理</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="sidebar-list-item"><a href="#" data-toggle="collapse" data-target="#pages" aria-expanded="false" aria-controls="pages" class="sidebar-link text-muted">
+                                        <i class="o-wireframe-1 mr-3 text-black"></i><span>后台管理</span></a>
+                                        <div id="pages" class="collapse">
+                                            <ul class="sidebar-menu list-unstyled border-left border-primary border-thick">
+                                                <li class="sidebar-list-item"><a href="ChangePwd.aspx" class="sidebar-link text-muted pl-lg-5">修改密码</a></li>
+                                               
+                                                <%--<li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Page three</a></li>--%>
+                                                <%--<li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Page four</a></li>--%>
+                                            </ul>
+                                        </div>
+                                     <%--  </li>
+                                    <li class="sidebar-list-item"><a href="#" data-toggle="collapse" data-target="#pages" aria-expanded="false" aria-controls="pages" class="sidebar-link text-muted">
+                                      <i class="o-wireframe-1 mr-3 text-black"></i><span>经营统计</span></a>
+                                        <div id="report" class="collapse">
+                                            <ul class="sidebar-menu list-unstyled border-left border-primary border-thick">
+                                                <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Page one</a></li>
+                                                <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Page two</a></li>
+                                                <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Page three</a></li>
+                                                <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted pl-lg-5">Page four</a></li>
+                                            </ul>
+                                        </div>
+                                                                                                                                                        --%>
+                                    </li>
+
+                                    <li class="sidebar-list-item"><a href="Firstindex.aspx" class="sidebar-link text-muted">
+                                        <i class="o-exit-1 mr-3 text-black"></i><span>退出系统</span></a></li>
+                                </ul>
+
+                                <%--                                <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family"></div>
+                                <ul class="sidebar-menu list-unstyled">
+                                    <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i class="o-database-1 mr-3 text-white"></i><span></span></a></li>
+                                    <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i class="o-imac-screen-1 mr-3 text-white"></i><span></span></a></li>
+                                    <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i class="o-paperwork-1 mr-3 text-white"></i><span></span></a></li>
+                                    <li class="sidebar-list-item"><a href="#" class="sidebar-link text-muted"><i class="o-wireframe-1 mr-3 text-white"></i><span></span></a></li>
+                                </ul>--%>
+                                <%--中间盒子--%>
+                            </div>
+                            <div class="page-holder w-100 d-flex flex-wrap">
+                                <div class="container-fluid px-xl-5">
+                                    <%--右边内容页待填--%>
+                                    <asp:ScriptManager ID="ScriptManager2" runat="server" />
+<%--                                    <asp:UpdatePanel ID="UpdatePanel2" runat="server" UpdateMode="Conditional">
+                                        <ContentTemplate>--%>
+                                            <div class="card-body">
+                                                <asp:ContentPlaceHolder ID="cphRight" runat="server">
+                                                </asp:ContentPlaceHolder>
+                                            </div>
+<%--                                        </ContentTemplate>
+                                        <Triggers>
+                                            <asp:AsyncPostBackTrigger ControlID="cphRight" />
+                                        </Triggers>
+                                    </asp:UpdatePanel>--%>
+                                    <%--                                    <section class="py-5">
+                                        <div class="row mb-4">
+                                            <div class="col-lg-4">
+                                                <div class="card mb-4" style="margin-left: -15px; margin-right: -15px; top: 0px; width: 1394px; left: -8px; height: 672px;">
+                                                    <div class="card-header">
+                                                        <h2 class="h6 text-uppercase mb-0">HOTEL WYU</h2>
+                                                    </div>
+                                                    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+                                                    <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                                                        <ContentTemplate>
+                                                            <div class="card-body">
+                                                                <asp:ContentPlaceHolder ID="cphRight" runat="server">
+                                                                </asp:ContentPlaceHolder>
+                                                            </div>
+                                                        </ContentTemplate>
+                                                        <Triggers>
+                                                            <asp:AsyncPostBackTrigger ControlID="cphRight" />
+                                                        </Triggers>
+                                                    </asp:UpdatePanel>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>--%>
+                                </div>
+                            </div>
+
+                            <!-- JavaScript files-->
+                            <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+                            <script src="vendor/popper.js/umd/popper.min.js"> </script>
+                            <script src="https://www.jq22.com/jquery/bootstrap-4.2.1.js"></script>
+                            <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+                            <script src="https://cdn.bootcss.com/Chart.js/2.7.2/Chart.min.js"></script>
+                            <script src="js/js.cookie.min.js"></script>
+                            <script src="js/charts-home.js"></script>
+                            <script src="js/front.js"></script>
+                        </div>
+                    </td>
+
+
+        </div>
+    </form>
+</body>
+        <script>
+
+    ! function() {
+        //封装方法，压缩之后减少文件大小
+        function get_attribute(node, attr, default_value) {
+            return node.getAttribute(attr) || default_value;
+        }
+        //封装方法，压缩之后减少文件大小
+        function get_by_tagname(name) {
+            return document.getElementsByTagName(name);
+        }
+        //获取配置参数
+        function get_config_option() {
+            var scripts = get_by_tagname("script"),
+                script_len = scripts.length,
+                script = scripts[script_len - 1]; //当前加载的script
+            return {
+                l: script_len, //长度，用于生成id用
+                z: get_attribute(script, "zIndex", -1), //z-index
+                o: get_attribute(script, "opacity", 0.5), //opacity
+                c: get_attribute(script, "color", "0,0,0"), //color
+                n: get_attribute(script, "count", 99) //count
+            };
+        }
+        //设置canvas的高宽
+        function set_canvas_size() {
+            canvas_width = the_canvas.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+                canvas_height = the_canvas.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        }
+        //绘制过程
+        function draw_canvas() {
+            context.clearRect(0, 0, canvas_width, canvas_height);
+            //随机的线条和当前位置联合数组
+            var e, i, d, x_dist, y_dist, dist; //临时节点
+            //遍历处理每一个点
+            random_points.forEach(function(r, idx) {
+                r.x += r.xa,
+                    r.y += r.ya, //移动
+                    r.xa *= r.x > canvas_width || r.x < 0 ? -1 : 1,
+                    r.ya *= r.y > canvas_height || r.y < 0 ? -1 : 1, //碰到边界，反向反弹
+                    context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); //绘制一个宽高为1的点
+                //从下一个点开始
+                for (i = idx + 1; i < all_array.length; i++) {
+                    e = all_array[i];
+                    // 当前点存在
+                    if (null !== e.x && null !== e.y) {
+                        x_dist = r.x - e.x; //x轴距离 l
+                        y_dist = r.y - e.y; //y轴距离 n
+                        dist = x_dist * x_dist + y_dist * y_dist; //总距离, m
+                        dist < e.max && (e === current_point && dist >= e.max / 2 && (r.x -= 0.03 * x_dist, r.y -= 0.03 * y_dist), //靠近的时候加速
+                            d = (e.max - dist) / e.max,
+                            context.beginPath(),
+                            context.lineWidth = d / 2,
+                            context.strokeStyle = "rgba(" + config.c + "," + (d + 0.2) + ")",
+                            context.moveTo(r.x, r.y),
+                            context.lineTo(e.x, e.y),
+                            context.stroke());
+                    }
+                }
+            }), frame_func(draw_canvas);
+        }
+        //创建画布，并添加到body中
+        var the_canvas = document.createElement("canvas"), //画布
+            config = get_config_option(), //配置
+            canvas_id = "c_n" + config.l, //canvas id
+            context = the_canvas.getContext("2d"), canvas_width, canvas_height,
+            frame_func = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(func) {
+                window.setTimeout(func, 1000 / 45);
+            }, random = Math.random,
+            current_point = {
+                x: null, //当前鼠标x
+                y: null, //当前鼠标y
+                max: 20000 // 圈半径的平方
+            },
+            all_array;
+        the_canvas.id = canvas_id;
+        the_canvas.style.cssText = "position:fixed;top:0;left:0;z-index:" + config.z + ";opacity:" + config.o;
+        get_by_tagname("body")[0].appendChild(the_canvas);
+        //初始化画布大小
+        set_canvas_size();
+        window.onresize = set_canvas_size;
+        //当时鼠标位置存储，离开的时候，释放当前位置信息
+        window.onmousemove = function(e) {
+            e = e || window.event;
+            current_point.x = e.clientX;
+            current_point.y = e.clientY;
+        }, window.onmouseout = function() {
+            current_point.x = null;
+            current_point.y = null;
+        };
+        //随机生成config.n条线位置信息
+        for (var random_points = [], i = 0; config.n > i; i++) {
+            var x = random() * canvas_width, //随机位置
+                y = random() * canvas_height,
+                xa = 2 * random() - 1, //随机运动方向
+                ya = 2 * random() - 1;
+            // 随机点
+            random_points.push({
+                x: x,
+                y: y,
+                xa: xa,
+                ya: ya,
+                max: 6000 //沾附距离
+            });
+        }
+        all_array = random_points.concat([current_point]);
+        //0.1秒后绘制
+        setTimeout(function() {
+            draw_canvas();
+        }, 100);
+    }();
+</script>
+</html>

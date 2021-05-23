@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\ASP\子龙\HotelManage-master\HotelManage-master\DAL\bin\Debug\DAL.dll
+C:\Users\Administrator\Desktop\ASP\子龙\HotelManage-master\HotelManage-master\DAL\bin\Debug\DAL.pdb
+C:\Users\Administrator\Desktop\ASP\子龙\HotelManage-master\HotelManage-master\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\ASP\子龙\HotelManage-master\HotelManage-master\DAL\obj\Debug\DAL.dll
+C:\Users\Administrator\Desktop\ASP\子龙\HotelManage-master\HotelManage-master\DAL\obj\Debug\DAL.pdb
