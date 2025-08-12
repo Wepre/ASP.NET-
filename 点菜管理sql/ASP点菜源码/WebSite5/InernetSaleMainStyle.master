@@ -1,0 +1,215 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="InernetSaleMainStyle.master.cs" Inherits="InernetSaleMainStyle" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="Stylesheet" type="text/css" href="css/myMainStyle.css" />
+    
+    <style type="text/css">
+        .style1
+        {
+            height: 105px;
+            width: 1122px;
+        }
+        .style2
+        {
+            height: 278px;
+            width: 1122px;
+        }
+        .style3
+        {
+            width: 245px;
+            height: 100px;
+        }
+        .style4
+        {
+            width: 245px;
+            height: 103px;
+        }
+        .style5
+        {
+            width: 288px;
+            height: 102px;
+        }
+        .style7
+        {
+            height: 103px;
+        }
+        .style8
+        {
+            width: 39px;
+            height: 19px;
+        }
+        .style9
+        {
+            width: 27px;
+            height: 21px;
+        }
+        .style14
+        {
+            width: 236px;
+            height: 103px;
+        }
+        .style16
+        {
+            width: 141px;
+            height: 20px;
+        }
+        .style18
+        {
+            width: 494px;
+        }
+        .style19
+        {
+            width: 231px;
+            height: 90px;
+        }
+        .style21
+        {
+            width: 494px;
+            height: 18px;
+        }
+        .style22
+        {
+            width: 1122px;
+        }
+        .style24
+        {
+            height: 26px;
+        }
+        .style25
+        {
+            width: 324px;
+        }
+        .style26
+        {
+            width: 534px;
+        }
+        .style27
+        {
+            width: 534px;
+            height: 18px;
+        }
+    </style>
+    </head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+       
+        
+            <table style="width: 100%; height: 531px;">
+                <tr>
+                    <td class="style1" style="vertical-align: top; text-align: left;">
+                        <table style="width: 100%; height: 104px; margin-bottom: 0px;">
+                            <tr>
+                                <td class="style4" style="text-align: left; vertical-align: top;">
+                                    <img alt="" class="style3" src="imgs/chilema2.jpg" /></td>
+                                <td class="style14" style="vertical-align: top; text-align: left">
+                                    <img alt="" class="style5" src="imgs/logo.png" /></td>
+                                <td style="vertical-align: top; text-align: left" class="style7">
+                                   
+                                    <table style="width: 100%; height: 103px;">
+                                        <tr>
+                                            <td class="style24" style="vertical-align: top; text-align: left">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <asp:ImageButton ID="LBLogin" runat="server" ImageUrl="~/imgs/26.gif" 
+                                                    onclick="IBLogin_Click" />
+                                                &nbsp;
+                                                <asp:ImageButton ID="LBRegister" runat="server" ImageUrl="~/imgs/33.gif" 
+                                                    onclick="LBRegister_Click" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="vertical-align: top; text-align: left">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <asp:HyperLink ID="HLIndex" runat="server" Font-Bold="True" Font-Size="Small" 
+                                                    ForeColor="#993366" NavigateUrl="~/ShowFoods.aspx">首页</asp:HyperLink>
+&nbsp;<img alt="" class="style8" src="WebIcon/Buy.png" /><asp:LinkButton ID="LinkButton1" runat="server" Font-Bold="True" 
+                                                    Font-Size="Small" ForeColor="#993366" onclick="LinkButton1_Click">购物车</asp:LinkButton>
+                                                &nbsp;&nbsp;&nbsp;<img alt="" class="style9" src="WebIcon/Smiley.png" /><asp:LinkButton 
+                                                    ID="LinkButton2" runat="server" Font-Bold="True" Font-Size="Small" 
+                                                    ForeColor="#993366" onclick="LinkButton2_Click">我的订单</asp:LinkButton>
+                                                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="LBUserStatus" runat="server" Font-Size="Small" ForeColor="#FFCC00" 
+                                                    Text="状态:未登录" BorderColor="White" Font-Bold="True" 
+                                                    Font-Names="Sitka Display" Font-Overline="False"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp; <asp:Button ID="BtnExit" runat="server" onclick="BtnExit_Click" Text="退出" />
+&nbsp; </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="vertical-align: top; text-align: left">
+                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                                 &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                                                     ControlToValidate="TBSearch" ErrorMessage="*请输入要检索的内容" ForeColor="Red" 
+                                                     ValidationGroup="100"></asp:RequiredFieldValidator>
+&nbsp;<asp:TextBox ID="TBSearch" runat="server" ValidationGroup="100"></asp:TextBox>
+&nbsp;&nbsp;
+                                                 <asp:ImageButton ID="ImageButtonSearch" runat="server" Height="18px" 
+                                                     ImageUrl="~/imgs/search.PNG" Width="34px" 
+                                                     onclick="ImageButtonSearch_Click" ValidationGroup="100" />
+                                        </td>
+                                        </tr>
+                                    </table>
+                                   
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2" style="vertical-align: top">
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style22" style="vertical-align: top; text-align: left">
+                        <table style="width: 99%; height: 138px;">
+                            <tr>
+                                <td id=" " class="style26">
+                                    友好链接</td>
+                                <td class="style18">
+                                    NBCC RCHTS RESERVED</td>
+                                <td rowspan="4" style="vertical-align: top; text-align: left" class="style25">
+                                    <img alt="" class="style19" src="imgs/chilema3.jpg" /><br />
+                                    <br />
+                                    首页 关于 站点导航 rss 关于我们</td>
+                            </tr>
+                            <tr>
+                                <td class="style27">
+                                    <asp:HyperLink ID="meituan" runat="server" Font-Size="Small" 
+                                        NavigateUrl="https://www.meituan.com" Target="_blank">美团</asp:HyperLink>
+                                </td>
+                                <td class="style21">
+                                    2017</td>
+                            </tr>
+                            <tr>
+                                <td class="style26">
+                                    <asp:HyperLink ID="baidu" runat="server" Font-Size="Small" 
+                                        NavigateUrl="https://www.baidu.com" Target="_blank">百度</asp:HyperLink>
+                                </td>
+                                <td class="style18">
+                                    www.chilema.cn</td>
+                            </tr>
+                            <tr>
+                                <td class="style26">
+                                    <asp:HyperLink ID="changshaxueyuan" runat="server" NavigateUrl="https://www.ccsu.cn" 
+                                        Target="_blank">长沙学院</asp:HyperLink>
+                                </td>
+                                <td class="style18">
+                                    <img alt="" class="style16" src="imgs/payment.gif" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        
+        
+    </div>
+    </form>
+</body>
+</html>

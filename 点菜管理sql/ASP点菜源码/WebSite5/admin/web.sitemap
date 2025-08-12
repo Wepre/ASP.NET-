@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sitMap>
+  　<siteMapNode title="Default" description="Home" url="Default.aspx" >
+    　　<siteMapNode title="Members" description="Members" url="Members.aspx">
+      　　　<siteMapNode title="My Account" description="My Account" url="MyAccount.aspx" />
+      　　　<siteMapNode title="Products" description="Products" url="Products.aspx" />
+      　　
+    </siteMapNode>
+    　　<siteMapNode title="Administration" description="Administration" url="~/Admin/Default.aspx">
+      　　　<siteMapNode title="Customer" description="Customer Admin" url="~/Admin/Customer/default.aspx" />
+      　　　<siteMapNode title="Products Admin" description="Products Admin" url="~/Admin/ProductsAdmin.aspx" />
+    </siteMapNode>
+  </siteMapNode>
+</sitMap>

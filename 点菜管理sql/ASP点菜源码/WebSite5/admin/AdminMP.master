@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMP.master.cs" Inherits="admin_AdminMP" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="Stylesheet" type="text/css" href="adminStyle.css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style2
+        {
+            width: 1033px;
+        }
+        .style3
+        {
+            width: 101px;
+        }
+        .style4
+        {
+            width: 1033px;
+            height: 116px;
+        }
+        .style5
+        {}
+        .style6
+        {
+            width: 196px;
+            height: 57px;
+        }
+        .style8
+        {
+            width: 1033px;
+            height: 217px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+            <table style="width: 100%; height: 439px;">
+                <tr>
+                    <td class="style3" rowspan="3">
+                        &nbsp;</td>
+                    <td class="style4" style="color: #0000FF; font-size: xx-large">
+                        <img alt="" class="style6" src="adminImg/chilema2.jpg" /><br />
+                        后台管理</td>
+                    <td class="style5" rowspan="3">
+                        </td>
+                </tr>
+                <tr>
+                    <td class="style8">
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                         </asp:ContentPlaceHolder>
+        </td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        &nbsp;</td>
+                </tr>
+            </table>
+        
+       
+    </div>
+    </form>
+</body>
+</html>

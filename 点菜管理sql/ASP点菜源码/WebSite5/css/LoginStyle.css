@@ -1,0 +1,15 @@
+﻿body 
+{
+    background:#e4e9ec url('../imgs/lbg.jpg') repeat-x;
+   
+    background-position:center;
+    padding:0;
+    font-family:Arial, Arial, Helvetica, Sans-Serif;
+    font-size:11px;
+    margin:0px auto 3px auto;
+    color:#000;
+     height: 150px;
+     width: 200;
+    text-align:center;
+    
+}

@@ -1,0 +1,12 @@
+﻿body 
+{
+    background:#e4e9ec url('adminImg/adminBg1.jpg') repeat-x 50% top;
+    padding:0;
+    font-family:Arial, Arial, Helvetica, Sans-Serif;
+    font-size:11px;
+    margin:0px auto 3px auto;
+    color:#000;
+    height: 531px;
+    text-align:center;
+    width: 1147px;
+}
